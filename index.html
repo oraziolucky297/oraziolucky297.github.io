@@ -1,321 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aishat Yakub | Recruiter • HR Professional • Career Consultant</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aishat Yakub | HR Professional</title>
+    <!-- Google Fonts for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        /* ----- RESET & BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a2a3a;
+            line-height: 1.6;
+        }
 
-<style>
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        /* ----- BUTTONS ----- */
+        .btn {
+            display: inline-block;
+            background: #1a5a9c;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
 
-html{
-scroll-behavior:smooth;
-}
+        .btn:hover {
+            background: #0e3d6e;
+            transform: translateY(-2px);
+        }
 
-body{
-background:#f5f8fc;
-color:#222;
-}
+        .btn-outline {
+            background: transparent;
+            color: #1a5a9c;
+            border: 2px solid #1a5a9c;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-background:white;
-position:sticky;
-top:0;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-z-index:999;
-}
+        .btn-outline:hover {
+            background: #1a5a9c;
+            color: #ffffff;
+        }
 
-.logo{
-font-size:28px;
-font-weight:700;
-color:#0F4C81;
-}
+        /* ----- HEADER / NAV ----- */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e6edf4;
+        }
 
-nav a{
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-color:#333;
-transition:.3s;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-nav a:hover{
-color:#0F4C81;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a5a9c;
+        }
 
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:90px 8%;
-gap:60px;
-flex-wrap:wrap;
-}
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-.hero-text{
-flex:1;
-min-width:300px;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-.hero-text h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:20px;
-}
+        .nav-links a:hover {
+            color: #1a5a9c;
+        }
 
-.hero-text h2{
-font-size:24px;
-color:#0F4C81;
-margin-bottom:20px;
-}
+        /* ----- HERO SECTION ----- */
+        .hero {
+            text-align: center;
+            padding: 60px 0 50px;
+        }
 
-.hero-text p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:35px;
-color:#555;
-}
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1a5a9c;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(26, 90, 156, 0.15);
+        }
 
-.btn{
-display:inline-block;
-padding:15px 32px;
-background:#0F4C81;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-margin-right:15px;
-transition:.3s;
-}
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a2a3a;
+            margin-bottom: 8px;
+        }
 
-.btn:hover{
-background:#08365d;
-}
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #1a5a9c;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
 
-.btn-outline{
-background:white;
-color:#0F4C81;
-border:2px solid #0F4C81;
-}
+        .hero .description {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #3a4a5a;
+            font-size: 1.05rem;
+        }
 
-.hero-image{
-flex:1;
-text-align:center;
-}
+        .hero .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.hero-image img{
-width:360px;
-max-width:100%;
-border-radius:25px;
-box-shadow:0 15px 45px rgba(0,0,0,.15);
-}
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
+        /* ----- SECTION TITLES ----- */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eef4f9;
+        }
 
-.card:hover{
-transform:translateY(-8px);
-}
-</style>
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2a3a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: #1a5a9c;
+        }
+
+        /* ----- ABOUT ----- */
+        .about-grid {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-grid .text {
+            flex: 2;
+            min-width: 260px;
+        }
+
+        .about-grid .text p {
+            margin-bottom: 16px;
+            color: #2c3e50;
+        }
+
+        .about-grid .image {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e6edf4;
+        }
+
+        /* ----- SERVICES / SKILLS CARDS ----- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #f8faff;
+            padding: 28px 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #e6edf4;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(26, 90, 156, 0.08);
+        }
+
+        .card h3 {
+            color: #1a5a9c;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: #3a4a5a;
+            font-size: 0.95rem;
+        }
+
+        /* ----- EXPERIENCE & SKILLS LIST ----- */
+        .exp-item {
+            margin-bottom: 24px;
+        }
+
+        .exp-item h3 {
+            color: #1a2a3a;
+            font-weight: 600;
+        }
+
+        .exp-item .meta {
+            color: #1a5a9c;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .exp-item ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .skills-list li {
+            background: #eef4f9;
+            padding: 6px 18px;
+            border-radius: 30px;
+            list-style: none;
+            font-weight: 500;
+            color: #1a2a3a;
+            font-size: 0.9rem;
+        }
+
+        /* ----- CONTACT / FOOTER ----- */
+        .contact-box {
+            text-align: center;
+            background: #f8faff;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #e6edf4;
+        }
+
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .contact-box .email {
+            font-weight: 600;
+            color: #1a5a9c;
+            font-size: 1.2rem;
+        }
+
+        .contact-box .btn-group {
+            margin-top: 24px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            color: #6a7a8a;
+            font-size: 0.9rem;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .nav-links {
+                gap: 16px;
+                margin-top: 10px;
+            }
+            .about-grid {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .contact-box {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Aishat Yakub</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="logo">
-Aishat Yakub
-</div>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container">
+            <!-- Replace the src with your actual profile picture file name -->
+            <img src="images/profile.jpg" alt="Aishat Yakub" class="profile-photo" />
+            <h1>Empowering Businesses to Hire Exceptional Talent.</h1>
+            <p class="tagline">Recruiter • HR Professional • Career Consultant</p>
+            <p class="description">
+                Helping businesses build high-performing teams while empowering professionals to achieve meaningful career success through recruitment, HR expertise, ATS resume optimization, and career consulting.
+            </p>
+            <div class="btn-group">
+                <a href="#contact" class="btn">Let's Work Together</a>
+                <!-- IMPORTANT: Replace the href below with the direct URL to your PDF resume -->
+                <a href="https://aishatyakub.github.io/Aishat-Yakub-Resume.pdf" download class="btn btn-outline">Download Résumé</a>
+            </div>
+        </div>
+    </section>
 
-<nav>
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="text">
+                    <p>
+                        I'm Aishat Yakub, a Recruiter, HR Professional, and Career Consultant passionate about helping businesses hire exceptional talent and helping professionals achieve meaningful career success.
+                    </p>
+                    <p>
+                        My experience includes talent sourcing, candidate screening, ATS-friendly resume writing, LinkedIn profile optimization, interview preparation, and recruitment coordination. I enjoy building lasting relationships and delivering solutions that create value for both employers and job seekers.
+                    </p>
+                </div>
+                <div class="image">
+                    <!-- Replace the src with your actual about page photo -->
+                    <img src="images/about.jpg" alt="Aishat Yakub" class="about-photo" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="#about">About</a>
+    <!-- ===== SERVICES ===== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Recruitment</h3>
+                    <p>Helping organizations source, screen and recruit top talent.</p>
+                </div>
+                <div class="card">
+                    <h3>Career Consulting</h3>
+                    <p>Helping professionals achieve career growth with personalized guidance.</p>
+                </div>
+                <div class="card">
+                    <h3>ATS Resume Writing</h3>
+                    <p>Professional resumes optimized for Applicant Tracking Systems.</p>
+                </div>
+                <div class="card">
+                    <h3>LinkedIn Optimization</h3>
+                    <p>Creating profiles that attract recruiters and hiring managers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="#services">Services</a>
+    <!-- ===== EXPERIENCE & SKILLS ===== -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience &amp; <span>Skills</span></h2>
 
-<a href="#experience">Experience</a>
+            <div class="exp-item">
+                <h3>Freelance Career Consultant</h3>
+                <p class="meta">2026 – Present</p>
+                <ul>
+                    <li>Optimized 95+ ATS-friendly resumes.</li>
+                    <li>Provided interview coaching.</li>
+                    <li>Improved LinkedIn profiles.</li>
+                    <li>Supported clients worldwide.</li>
+                </ul>
+            </div>
 
-<a href="#contact">Contact</a>
+            <div class="exp-item">
+                <h3>Human Resources Specialist</h3>
+                <p class="meta">2022 – 2024</p>
+                <ul>
+                    <li>Talent sourcing and candidate screening.</li>
+                    <li>Interview coordination.</li>
+                    <li>Recruitment administration.</li>
+                    <li>ATS management.</li>
+                </ul>
+            </div>
 
-</nav>
+            <div>
+                <h3 style="margin: 30px 0 10px; text-align:center;">Core Skills</h3>
+                <ul class="skills-list">
+                    <li>Talent Acquisition</li>
+                    <li>Candidate Screening</li>
+                    <li>LinkedIn Recruiter</li>
+                    <li>ATS Optimization</li>
+                    <li>Interview Coordination</li>
+                    <li>Workable &amp; Lever</li>
+                    <li>Google Workspace</li>
+                    <li>Career Coaching</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-</header>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h2 class="section-title" style="margin-bottom:12px;">Let's <span>Work Together</span></h2>
+                <p>Whether you're looking to hire top talent, optimize your recruitment process, or advance your career, I'd love to hear from you.</p>
+                <p class="email">hi@aishatyakub.com</p>
+                <p style="margin: 6px 0 8px;">
+                    LinkedIn: <a href="https://linkedin.com/in/aishat-yakub1" target="_blank" style="color:#1a5a9c; text-decoration:none; font-weight:500;">linkedin.com/in/aishat-yakub1</a>
+                </p>
+                <div class="btn-group">
+                    <a href="mailto:hi@aishatyakub.com" class="btn">Email Me</a>
+                    <!-- IMPORTANT: Replace the href below with the direct URL to your PDF resume -->
+                    <a href="https://aishatyakub.github.io/Aishat-Yakub-Resume.pdf" download class="btn btn-outline">Download Résumé</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-
-<div class="hero-text">
-
-<h1>Empowering Businesses to Hire Exceptional Talent.</h1>
-
-<h2>Recruiter • HR Professional • Career Consultant</h2>
-
-<p>
-
-Helping businesses build high-performing teams while empowering professionals to achieve meaningful career success through recruitment, HR expertise, ATS resume optimization and career consulting.
-
-</p>
-
-<a href="#contact" class="btn">Let's Work Together</a>
-
-<a href="#" class="btn btn-outline">Download Résumé</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="images/profile.jpg" alt="Aishat Yakub">
-
-</div>
-
-</section>
-<!-- ABOUT -->
-<section id="about" style="padding:80px 8%; background:white;">
-  <h2 style="font-size:38px;color:#0F4C81;margin-bottom:20px;">About Me</h2>
-
-  <p style="font-size:18px;line-height:1.9;color:#555;max-width:900px;">
-    I'm Aishat Yakub, a Recruiter, HR Professional, and Career Consultant passionate about helping businesses hire exceptional talent and helping professionals achieve meaningful career success.
-  </p>
-
-  <br>
-
-  <p style="font-size:18px;line-height:1.9;color:#555;max-width:900px;">
-    My experience includes talent sourcing, candidate screening, ATS-friendly resume writing, LinkedIn profile optimization, interview preparation, and recruitment coordination. I enjoy building lasting relationships and delivering solutions that create value for both employers and job seekers.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" style="padding:80px 8%;background:#f5f8fc;">
-
-<h2 style="font-size:38px;color:#0F4C81;text-align:center;margin-bottom:50px;">
-Services
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
-
-<div class="card">
-<h3>Recruitment</h3>
-<p>Helping organizations source, screen and recruit top talent.</p>
-</div>
-
-<div class="card">
-<h3>Career Consulting</h3>
-<p>Helping professionals achieve career growth with personalized guidance.</p>
-</div>
-
-<div class="card">
-<h3>ATS Resume Writing</h3>
-<p>Professional resumes optimized for Applicant Tracking Systems.</p>
-</div>
-
-<div class="card">
-<h3>LinkedIn Optimization</h3>
-<p>Creating profiles that attract recruiters and hiring managers.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" style="padding:80px 8%;background:white;">
-
-<h2 style="font-size:38px;color:#0F4C81;margin-bottom:35px;">
-Professional Experience
-</h2>
-
-<h3>Freelance Career Consultant</h3>
-<p>2026 – Present</p>
-
-<ul style="margin-left:25px;line-height:2;">
-<li>Optimized 95+ ATS-friendly resumes.</li>
-<li>Provided interview coaching.</li>
-<li>Improved LinkedIn profiles.</li>
-<li>Supported clients worldwide.</li>
-</ul>
-
-<br>
-
-<h3>Human Resources Specialist</h3>
-<p>2022 – 2024</p>
-
-<ul style="margin-left:25px;line-height:2;">
-<li>Talent sourcing and candidate screening.</li>
-<li>Interview coordination.</li>
-<li>Recruitment administration.</li>
-<li>ATS management.</li>
-</ul>
-
-</section> 
-  <!-- SKILLS -->
-<section id="skills" style="padding:80px 8%;background:#f5f8fc;">
-
-<h2 style="font-size:38px;color:#0F4C81;text-align:center;margin-bottom:40px;">
-Core Skills
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
-
-<div class="card">Talent Acquisition</div>
-<div class="card">Candidate Screening</div>
-<div class="card">LinkedIn Recruiter</div>
-<div class="card">ATS Optimization</div>
-<div class="card">Interview Coordination</div>
-<div class="card">Workable & Lever</div>
-<div class="card">Google Workspace</div>
-<div class="card">Career Coaching</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" style="padding:80px 8%;background:white;text-align:center;">
-
-<h2 style="font-size:38px;color:#0F4C81;">
-Let's Work Together
-</h2>
-
-<p style="font-size:18px;color:#555;margin:25px auto;max-width:700px;line-height:1.8;">
-Whether you're looking to hire top talent, optimize your recruitment process, or advance your career, I'd love to hear from you.
-</p>
-
-<p><strong>Email:</strong> hi@aishatyakub.com</p>
-
-<p><strong>LinkedIn:</strong> linkedin.com/in/aishat-yakub1</p>
-
-<a class="btn" href="files/AISHAT_YAKUB_Resume.pdf">
-Download Résumé
-</a>
-
-</section>
-
-<footer style="background:#0F4C81;color:white;text-align:center;padding:35px;">
-
-<h3>Aishat Yakub</h3>
-
-<p>Recruiter • HR Professional • Career Consultant</p>
-
-<p style="margin-top:15px;">
-© 2026 All Rights Reserved.
-</p>
-
-</footer>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            &copy; 2026 Aishat Yakub. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
